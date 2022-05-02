@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;400;500;600&display=swap');
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* ----[ Menú de Navegación ]---- */
+
+.navbar {
+    background-color: #383d42;
+}
+
+.navbar-dark {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #999b9d;
+}
+
+.nav-item {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.marca {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+#tickets {
+    color: #35a14c;
+}
+
+/* ----[ Pantalla Dividida ]---- */
+
+.pant-dividida {
+    display: flex;
+    height: 635px;
+    gap: 1px;
+}
+
+.pd-hijo {
+    width: 50%;
+    flex-grow: 1;
+    background-color: #383d42;
+}
+
+.pd-foto {
+    background-image: url('../images/honolulu.jpg');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.pd-texto {
+    justify-content: flex-start;
+    color: #ffffff;
+}
+
+/* ----[ Carrusel ]---- */
+
+.carousel {
+    overflow: hidden
+}
+
+.carousel-caption {
+    width: 55%;
+    height: auto;
+    transform: translate(30%, -45%);
+    text-align: end;
+    font-size: 1.3rem;
+
+}
+
+
+/*.carousel-caption {
+    top: 60%;
+    transform: translateY(-50%);
+    text-align: end;
+    font-size: 1.3rem;
+}*/
+
+.carousel-item {
+
+    background: black;
+    height: 85vh;
+
+}
+
+.carousel-inner img {
+    height: 100vh;
+    opacity: 0.4;
+}
+
+/* ----[ Antetítulo / Título ]---- */
+
+.oradores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.antetitulo {
+    font-weight: 300;
+}
+
+.titulo {
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#subrayado {
+    text-decoration: underline dotted #75797d;
+}
+
+/* ----[ Tarjetas]---- */
+
+.card {
+    width: 380px;
+}
+
+/* ----[ Pie de Página]---- */
+
+.pie {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #233a44, #26556f);
+}
+
+.pie-menu {
+    display: flex;
+    height: 100px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pie-item {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.pie-item a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 5px;
+    padding: 10px;
+}
+
+.pie-item a:hover {
+    color: #c2c4c6;
+}
+
+
+/* ----[ Mod. Botón Success Carrusel]---- */
+.carousel-caption .btn-success {
+    background-color: #35a74d;
+    border-color: #35a74d;
+}
+
+.carousel-caption .btn-success:hover {
+    background-color: #3cbd56;
+    border-color: #3cbd56;
+}
+
+
+/* ----[ Mod. Botón Success Formulario]---- */
+.formulario {
+    width: 50%;
+}
+
+.formulario .btn-success {
+    background-color: #96c850;
+    border-color: #96c850;
+}
+
+.formulario .btn-success:hover {
+    background-color: #89b649;
+    border-color: #89b649;
+}
+
+
+
+/* ----[ Media Queries]---- */
+
+@media(max-width:992px) {
+    .pant-dividida {
+        flex-direction: column;
+    }
+
+    .pd-hijo {
+        width: 100%;
+        height: 50%;
+    }
+
+    .formulario {
+        width: auto;
+    }
+
+    .pant-dividida {
+        height: auto;
+    }
+}
+
+@media(min-width:992px) {
+    .navbar {
+        height: 115px;
+        padding: 50px;
+    }
+}
+
+@media(max-width:1600px) {
+    .navbar-dark {
+        font-size: 1rem;
+    }
+
+    .marca {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .card {
+        width: 300px;
+    }
+}
+
+/* ------[ Botón "Ir a Arriba" ]------
+    Código extraído de w3 schools de:
+    https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+*/
+#btnArriba {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #35a74d;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#btnArriba:hover {
+    background-color: #3cbd56;
+}
